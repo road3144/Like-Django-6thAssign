@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write Your Infomation</h1>
+    <form action="{% url 'create' %}" method="POST">
+        {% csrf_token %}
+        <p>이름 : <input type="text" name="name" ></p>
+        <p>나이 : <input type="text" name="age" ></p>
+        <p>이메일 : <input type="text" name="email" ></p>
+        자기소개 : <textarea name="introduce" cols="30" rows="10"></textarea>
+        <button type="submit">join</button>
+    </form>
+</body>
+</html>
